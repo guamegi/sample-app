@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata = {
@@ -9,22 +10,28 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        <h1>Logo</h1>
-        <ul>
+        <h1>
+          <Link href="/">
+            <img src="/vercel.svg" width={140}></img>
+          </Link>
+        </h1>
+        <ol>
           <li>
-            <a href="/read/1">html</a>
+            <Link href="/read/1">html</Link>
           </li>
           <li>
-            <a href="/read/2">css</a>
+            <Link href="/read/2">css</Link>
           </li>
-        </ul>
+        </ol>
+        <br />
         {children}
+        <br />
         <ul>
           <li>
-            <a href="/create">Create</a>
+            <Link href="/create">Create</Link>
           </li>
           <li>
-            <a href="/update/1">Update</a>
+            <Link href="/update/1">Update</Link>
           </li>
           <li>
             <input type="button" value="delete" />
