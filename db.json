@@ -8,7 +8,7 @@
     {
       "id": 2,
       "title": "css",
-      "body": "css is ..."
+      "body": "css is ...z"
     },
     {
       "title": "javascript",
@@ -34,6 +34,11 @@
       "title": "d",
       "body": "d",
       "id": 7
+    },
+    {
+      "title": "sdfas",
+      "body": "df",
+      "id": 8
     }
   ],
   "posts": [
