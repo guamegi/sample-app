@@ -1,7 +1,6 @@
-// "use client";
 import Link from "next/link";
 import "./globals.css";
-// import { useEffect, useState } from "react";
+import { Control } from "./Control";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,14 +8,6 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  // const [topics, setTopics] = useState([]);
-  // useEffect(() => {
-  //   fetch("http://localhost:9999/topics")
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       setTopics(result);
-  //     });
-  // }, []);
   const res = await fetch("http://localhost:9999/topics", {
     cache: "no-store",
   });
@@ -38,27 +29,11 @@ export default async function RootLayout({ children }) {
               </li>
             );
           })}
-          {/* <li>
-            <Link href="/read/1">html</Link>
-          </li>
-          <li>
-            <Link href="/read/2">css</Link>
-          </li> */}
         </ol>
         <br />
         {children}
         <br />
-        <ul>
-          <li>
-            <Link href="/create">Create</Link>
-          </li>
-          <li>
-            <Link href="/update/1">Update</Link>
-          </li>
-          <li>
-            <input type="button" value="delete" />
-          </li>
-        </ul>
+        <Control />
       </body>
     </html>
   );
